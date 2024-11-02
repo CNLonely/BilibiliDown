@@ -10,6 +10,12 @@
 
 记得将ffmpeg添加进系统环境变量中
 
+在运行前记得下载requirements
+
+```pip
+pip install -r requirements.txt
+```
+
 main.py文件中提供了示例代码
 
 首先会尝试读取user.json中保存的cookies
