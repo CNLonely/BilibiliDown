@@ -12,7 +12,21 @@
 
 main.py文件中提供了示例代码
 
+首先会尝试读取user.json中保存的cookies
+
+然后检测登录，如果未登录或者cookies失效，会尝试重新登录
+
+登录二维码在data/cache文件夹下
+
 ```python
+from core.biliBaseInfo import *
+from core.biliVideo import *
+from core.bilibiliDanmaku import *
+from core.biliVideoFusion import *
+from core.biliSubtitle import *
+from core.biliLogin import *
+
+if __name__ == '__main__':
     cookies = get_bili_cookies() # 获取登录后的cookies
     if check_login(cookies) == False: # 检查是否登录成功
         print("请先登录哔哩哔哩") 
